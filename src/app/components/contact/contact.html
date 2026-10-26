@@ -9,7 +9,7 @@
       <span>contact</span>
     </div>
 
-    <form class="contact-form" (ngSubmit)="sendMessage(); $event.preventDefault()">
+    <form class="contact-form" >
       <div class="form-group">
         <label for="name">Name</label>
         <input [(ngModel)]="name" type="text" id="name" name="name" placeholder="Your name" required>
@@ -25,7 +25,7 @@
         <textarea id="message" name="message" [(ngModel)]="message" placeholder="Write your message here..." required></textarea>
       </div>
 
-      <button type="submit" class="submit-btn">Send Message</button>
+      <button type="button" class="submit-btn" (click)="sendMessage()">Send Message</button>
     </form>
 
     <p *ngIf="status === 'success'">
