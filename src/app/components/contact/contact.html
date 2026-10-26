@@ -9,7 +9,7 @@
       <span>contact</span>
     </div>
 
-    <form class="contact-form" (ngSubmit)="sendMessage()" name="ContactDev">
+    <form class="contact-form" (ngSubmit)="sendMessage(); $event.preventDefault()">
       <div class="form-group">
         <label for="name">Name</label>
         <input [(ngModel)]="name" type="text" id="name" name="name" placeholder="Your name" required>
