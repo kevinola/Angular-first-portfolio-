@@ -1,0 +1,49 @@
+<!--<p>skills works!</p>
+ skills and services -->
+<section id="skills" class="portfolio-section">
+    <div class="wrap">
+        <div class="sub-title section-title">
+            <span>03</span><span>skills &amp; services</span>
+        </div>
+        <p class="section-intro">The tools I use to turn ideas into practical, accessible digital experiences.</p>
+        <div class="skills-grid">
+
+            <article class="skill-card" [class.expanded]="isSkillOpen('frontend')" [attr.aria-expanded]="isSkillOpen('frontend')">
+                <div class="skill-card-top"><span class="card-number">01 /</span><i class="fa-solid fa-code skill-icon" aria-hidden="true"></i></div>
+                <h2>HTML, CSS &amp; JavaScript</h2>
+                <p>Responsive, accessible interfaces built with clean structure and practical interactions.</p>
+                <div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                <div class="skill-more"><p>I create responsive layouts, style consistent interfaces, and add useful behaviour with JavaScript.</p><a href="#projects" (click)="showProjects('web')">View related projects ↗</a></div>
+                <button class="card-toggle" type="button" aria-label="More about HTML, CSS and JavaScript" [attr.aria-expanded]="isSkillOpen('frontend')" (click)="toggleSkill('frontend')"><span>{{ isSkillOpen('frontend') ? '−' : '+' }}</span></button>
+            </article>
+
+            <article class="skill-card" [class.expanded]="isSkillOpen('angular')" [attr.aria-expanded]="isSkillOpen('angular')">
+                <div class="skill-card-top"><span class="card-number">02 /</span><i class="fa-brands fa-angular skill-icon" aria-hidden="true"></i></div>
+                <h2>Angular &amp; TypeScript</h2>
+                <p>Structured front-end applications with reusable components and maintainable code.</p>
+                <div class="skill-tags"><span>Angular</span><span>TypeScript</span></div>
+                <div class="skill-more"><p>I use component-based patterns to organise interface logic and make front-end projects easier to maintain.</p><a href="#projects" (click)="showProjects('web')">View related projects ↗</a></div>
+                <button class="card-toggle" type="button" aria-label="More about Angular and TypeScript" [attr.aria-expanded]="isSkillOpen('angular')" (click)="toggleSkill('angular')"><span>{{ isSkillOpen('angular') ? '−' : '+' }}</span></button>
+            </article>
+
+            <article class="skill-card" [class.expanded]="isSkillOpen('php')" [attr.aria-expanded]="isSkillOpen('php')">
+                <div class="skill-card-top"><span class="card-number">03 /</span><i class="fa-brands fa-php skill-icon" aria-hidden="true"></i></div>
+                <h2>PHP &amp; SQL</h2>
+                <p>Database-driven websites, server-side logic, and reliable data handling.</p>
+                <div class="skill-tags"><span>PHP</span><span>MySQL</span><span>SQL</span></div>
+                <div class="skill-more"><p>I connect interfaces to databases, handle application data, and build server-side features for dynamic websites.</p><a href="#projects" (click)="showProjects('web')">View related projects ↗</a></div>
+                <button class="card-toggle" type="button" aria-label="More about PHP and SQL" [attr.aria-expanded]="isSkillOpen('php')" (click)="toggleSkill('php')"><span>{{ isSkillOpen('php') ? '−' : '+' }}</span></button>
+            </article>
+
+            <article class="skill-card" [class.expanded]="isSkillOpen('mobile')" [attr.aria-expanded]="isSkillOpen('mobile')">
+                <div class="skill-card-top"><span class="card-number">04 /</span><i class="fa-solid fa-mobile-screen-button skill-icon" aria-hidden="true"></i></div>
+                <h2>Cordova / Mobile Apps</h2>
+                <p>Cross-platform mobile application development using familiar web technologies.</p>
+                <div class="skill-tags"><span>Cordova</span><span>Android</span><span>iOS</span></div>
+                <div class="skill-more"><p>I use Apache Cordova to package web-based interfaces for supported mobile platforms and device features.</p><a href="#projects" (click)="showProjects('mobile')">View related projects ↗</a></div>
+                <button class="card-toggle" type="button" aria-label="More about Cordova mobile development" [attr.aria-expanded]="isSkillOpen('mobile')" (click)="toggleSkill('mobile')"><span>{{ isSkillOpen('mobile') ? '−' : '+' }}</span></button>
+            </article>
+
+        </div>
+    </div>
+</section>

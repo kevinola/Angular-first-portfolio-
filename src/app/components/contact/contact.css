@@ -1,0 +1,87 @@
+/* --- Contact Section Styles --- */
+.contact-section{
+  width:min(90%,1250px);
+  margin:0 auto;padding:55px 0;
+  border-top:1px solid var(--line);
+  scroll-margin-top:90px;
+  }
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.contact-section p {
+  color: #a0a0a0;
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+}
+
+/* Form Layout */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #d0d0d0;
+}
+
+/* Inputs and Textareas */
+.form-group input,
+.form-group textarea {
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  padding: 0.85rem 1rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f39c12; /* Accent color matching your yellow badges/accents */
+  box-shadow: 0 0 0 2px rgba(243, 156, 18, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: transparent;
+  color: #f39c12;
+  border: 1px solid #f39c12;
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background-color: #f39c12;
+  color: #121212;
+  transform: translateY(-2px);
+}
