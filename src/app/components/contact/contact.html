@@ -28,7 +28,7 @@
       <button type="submit" class="submit-btn">Send Message</button>
     </form>
 
-    <p *ngIf="submitted">
+    <p *ngIf="status === 'success'">
       Thanks, {{ name }}! Your form has been submitted.
     </p>
 

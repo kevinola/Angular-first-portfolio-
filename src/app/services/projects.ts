@@ -1,15 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core'; // Import signal (or BehaviorSubject)
 
 export interface Project {
   id: number;
   title: string;
   description: string;
-  focus: string; // new: shown in the modal
+  focus: string; 
   technologies: string[];
-  category: string; // space separated, e.g. 'tools web'
+  category: string;
   image: string;
 }
 
+// 
 @Injectable({
   providedIn: 'root',
 })
@@ -43,7 +44,7 @@ export class ProjectService {
         'A blog application focused on publishing and managing posts through a clean, readable interface.',
       focus: 'Content management and database-backed web development.',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Api', 'WordPress'],
-      category: 'web', // removed the stray leading space
+      category: 'web',
       image: 'img/projects/blog.webp',
     },
     {
@@ -59,7 +60,13 @@ export class ProjectService {
     },
   ];
 
+  currentFilter = signal<string>('all');
+
   getProjects(): Project[] {
     return this.projects;
+  }
+
+  setFilter(filter: string): void {
+    this.currentFilter.set(filter);
   }
 }
